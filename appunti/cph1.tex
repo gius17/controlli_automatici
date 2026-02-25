@@ -1,11 +1,10 @@
 
-
 \underline{i quiz non hanno penalità e non c'è minimo}
 seconda parte con 17 punti
 
 \section{Sistema dinamico}
 \begin{tcolorbox}[colback=yellow!10, colframe=black]
-Un sistema dinamico è un oggetto matematico adatto a descrivere qualsiasi fenomeno ``fisico'', in particolare questo formalismo matematico può essere utilizzato per studiare il comportamento di qualsiasi fenomeno con l'obiettivo di analizzare, simulare, predirre e \underline{controllare} le variazioni nel tempo delle grandezze che caratterizzano il fenomeno oggetto dello studio.
+    Un sistema dinamico è un oggetto matematico adatto a descrivere qualsiasi fenomeno ``fisico'', in particolare questo formalismo matematico può essere utilizzato per studiare il comportamento di qualsiasi fenomeno con l'obiettivo di analizzare, simulare, predirre e \underline{controllare} le variazioni nel tempo delle grandezze che caratterizzano il fenomeno oggetto dello studio.
 \end{tcolorbox}
 \begin{center}
     \includegraphics[width=0.5\textwidth]{foto/cph1/1.png}
@@ -15,94 +14,113 @@ Vogliamo studiare il comportamento della massa al variare della forza.
 \begin{itemize}
     \item Ingresso: $u(t)=F(t)$
     \item Uscita: $y(t)= p(t)$
-    \item Soluzione: $F(t) - \beta \cdot v(t) = m\cdot a(t) \rightarrow F(t) - \beta \cdot \dot{p}(t) = m\cdot \ddot{p}(t)$
+    \item Soluzione: $F(t) - \beta \cdot v(t) = m\cdot a(t) \rightarrow F(t) - \beta
+              \cdot \dot{p}(t) = m\cdot \ddot{p}(t)$
 \end{itemize}
 La soluzione quindi risulta essere l'equazione differenziale che descrive matematicamente la relazione quantitativa tra ingresso e uscita.
 La determinazione di questa relazione è l'obiettivo principale dello studio dei sistemi dinamici.
 \subsection{Differenze tra sistema statico e sistema dinamico}
 Procediamo per esempi:
 \begin{itemize}
-    \item Vogliamo studiare la caduta di tensione ai capi di un resistore di un circuito semplice a cui basta applicare la legge di Ohm.
-            \begin{itemize}
-            \item Ingressi: $u(t) = i(t)$
-            \item Uscite: $y(t) = V(t)$
-            \item Soluzione: $V(t) = R \cdot i(t)$
-            \begin{tcolorbox}[colback=yellow!10, colframe=black]
-                Un sistema si dice statico se il valore della sua uscita in un certo istante di tempo t dipende solo dal valore degli ingressi nello stesso istante di tempo t.
-            \end{tcolorbox}
-        \end{itemize} 
-    \item Vogliamo studiare la caduta di tensione ai capi di un condensatore a cui basta applicare la legge di Ohm.
-            \begin{itemize}
-            \item Ingressi: $u(t) = i(t)$
-            \item Uscite: $y(t) = V(t)$
-            \item Soluzione: $V(t) = \frac{1}{C} \int_{-\infty}^{t} u(t) dt$
-            \item Se vogliamo esprimere la soluzione in forma differenziale, possiamo derivare entrambi i membri dell'equazione e otteniamo $\dot{y}(t) = \frac{1}{C} \cdot u(t)$
-            \begin{tcolorbox}[colback=yellow!10, colframe=black]
-                Un sistema si dice dinamico se il valore della sua uscita in un certo istante di tempo t dipende dai valori degli ingressi in istanti di tempo precedenti a t.
-            \end{tcolorbox}
-        \end{itemize}   
+    \item Vogliamo studiare la caduta di tensione ai capi di un resistore di un circuito
+          semplice a cui basta applicare la legge di Ohm.
+          \begin{itemize}
+              \item Ingressi: $u(t) = i(t)$
+              \item Uscite: $y(t) = V(t)$
+              \item Soluzione: $V(t) = R \cdot i(t)$
+                    \begin{tcolorbox}[colback=yellow!10, colframe=black]
+                        Un sistema si dice statico se il valore della sua uscita in un certo istante di tempo t dipende solo dal valore degli ingressi nello stesso istante di tempo t.
+                    \end{tcolorbox}
+          \end{itemize}
+    \item Vogliamo studiare la caduta di tensione ai capi di un condensatore a cui basta
+          applicare la legge di Ohm.
+          \begin{itemize}
+              \item Ingressi: $u(t) = i(t)$
+              \item Uscite: $y(t) = V(t)$
+              \item Soluzione: $V(t) = \frac{1}{C} \int_{-\infty}^{t} u(t) dt$
+              \item Se vogliamo esprimere la soluzione in forma differenziale, possiamo derivare
+                    entrambi i membri dell'equazione e otteniamo $\dot{y}(t) = \frac{1}{C} \cdot
+                        u(t)$
+                    \begin{tcolorbox}[colback=yellow!10, colframe=black]
+                        Un sistema si dice dinamico se il valore della sua uscita in un certo istante di tempo t dipende dai valori degli ingressi in istanti di tempo precedenti a t.
+                    \end{tcolorbox}
+          \end{itemize}
 \end{itemize}
 \newpage
 Considerazioni che possiamo fare:
 \begin{itemize}
-    \item Un sistema dinamico è un sistema che ha memoria, ovvero il suo comportamento dipende da ciò che è accaduto in passato.
-    \item Un sistema statico è un sistema che non ha memoria, ovvero il suo comportamento dipende solo da ciò che accade nel presente, quindi caso particolare di un sistema dinamico.
-    \item Riconosco un sistema dinamico se è possibile descrivere il suo comoprtamento con un'equazione differenziale, altrimenti è un sistema statico.
+    \item Un sistema dinamico è un sistema che ha memoria, ovvero il suo comportamento
+          dipende da ciò che è accaduto in passato.
+    \item Un sistema statico è un sistema che non ha memoria, ovvero il suo comportamento
+          dipende solo da ciò che accade nel presente, quindi caso particolare di un
+          sistema dinamico.
+    \item Riconosco un sistema dinamico se è possibile descrivere il suo comoprtamento
+          con un'equazione differenziale, altrimenti è un sistema statico.
 \end{itemize}
 \subsection{Descrizione dei sistemi dinamici mediante le equazioni di ingresso-stato-uscita (descrizione matematica nello spazio di stato $\leftrightarrow$ state-space description)}
-Possiamo aggirare il problema della mancanza di memoria dei sistemi dinamici, introducendo delle variabili ausiliarie che ci permettono di tenere traccia di ciò che è accaduto in passato. Ipotizziamo che dobbiamo calcolare gli ingressi che vanno da $t_0$ a $t$, se introduciamo una variabile ausiliaria $x(t)$.
-Se prendo in esame l'esempio del condensatore:
+Possiamo aggirare il problema della mancanza di memoria dei sistemi dinamici,
+introducendo delle variabili ausiliarie che ci permettono di tenere traccia di
+ciò che è accaduto in passato. Ipotizziamo che dobbiamo calcolare gli ingressi
+che vanno da $t_0$ a $t$, se introduciamo una variabile ausiliaria $x(t)$. Se
+prendo in esame l'esempio del condensatore:
 \begin{itemize}
     \item Ingresso: $u(t) = i(t)$
     \item Uscita: $y(t) = V(t)$
     \item Soluzione: $y(t) = \frac{1}{C} \int_{-\infty}^{t} u(t) dt$
-    \item Introduciamo la variabile ausiliaria $y(t_0)= x(t) = \int_{-\infty}^{t_0} u(t) dt$, quindi $y(t) = x(t) + \frac{1}{C} \int_{t_0}^{t} u(t) dt$
+    \item Introduciamo la variabile ausiliaria $y(t_0)= x(t) = \int_{-\infty}^{t_0} u(t)
+              dt$, quindi $y(t) = x(t) + \frac{1}{C} \int_{t_0}^{t} u(t) dt$
 \end{itemize}
 Il mio stato corrente del sistema, quindi prima degli ingressi che mi interessano, è dato da $x(t) = y(t_0)$, che rappresenta la memoria del sistema, ovvero ciò che è accaduto in passato, e da $u(t)$, che rappresenta ciò che sta accadendo nel presente.
 \begin{tcolorbox}[colback=yellow!10, colframe=black]
     Ogni sistema dinamico a tempo continuo può essere descritto matematicamente nel seguente modo:
     \[
-    \begin{cases}
-        \dot{x}(t) = f(x(t), u(t), t) \\
-        y(t) = g(x(t), u(t), t)
-    \end{cases}
+        \begin{cases}
+            \dot{x}(t) = f(x(t), u(t), t) \\
+            y(t) = g(x(t), u(t), t)
+        \end{cases}
     \]
-    Queste equazioni sono dette equazioni di ingresso-stato-uscita, dove $x(t)$ è lo stato del sistema, $u(t)$ è l'ingresso del sistema e $y(t)$ è l'uscita del sistema.
+    Queste equazioni sono dette equazioni di ingresso-stato-uscita, dove $x(t)$ è
+    lo stato del sistema, $u(t)$ è l'ingresso del sistema e $y(t)$ è l'uscita del
+    sistema.
 \end{tcolorbox}
 Se torniamo all'esempio del condensatore, possiamo scrivere le equazioni di ingresso-stato-uscita nel seguente modo:
 \[
-\begin{cases}
-    \dot{x}(t) = \frac{1}{C}u(t) \\
-    y(t) = x(t)
-\end{cases}
+    \begin{cases}
+        \dot{x}(t) = \frac{1}{C}u(t) \\
+        y(t) = x(t)
+    \end{cases}
 \]
-Se invece consideriamo l'esempio del blocco soggetto ad attrito, possiamo scrivere le equazioni di ingresso-stato-uscita nel seguente modo, che era definita in precedenza come equazione differenziale $F(t) - \beta \cdot \dot{p}(t) = m\cdot \ddot{p}(t)$:
+Se invece consideriamo l'esempio del blocco soggetto ad attrito, possiamo
+scrivere le equazioni di ingresso-stato-uscita nel seguente modo, che era
+definita in precedenza come equazione differenziale $F(t) - \beta \cdot
+    \dot{p}(t) = m\cdot \ddot{p}(t)$:
 \[
-\begin{cases}
-    V(t) =\dot{p}(t) \\
-    a(t) = \dot{V}(t) = \ddot{p}(t)
-\end{cases}
+    \begin{cases}
+        V(t) =\dot{p}(t) \\
+        a(t) = \dot{V}(t) = \ddot{p}(t)
+    \end{cases}
 \]
 Da cui otteniamo:
 \[
-\begin{cases}
-    F(t)-\beta \cdot V(t) = m \cdot a(t) \\
-    V(t) = \dot{p}(t)
-\end{cases}\]
+    \begin{cases}
+        F(t)-\beta \cdot V(t) = m \cdot a(t) \\
+        V(t) = \dot{p}(t)
+    \end{cases}\]
 Ed infine otteniamo che le equazioni di ingresso-stato-uscita sono:
 \[
-\begin{cases}
-    \dot{x}_1(t) = x_2(t) \\
-    \dot{x}_2(t) = \frac{1}{m}u(t) - \frac{\beta}{m}x_2(t) \\
-    y(t) = x_1(t)
-\end{cases}
+    \begin{cases}
+        \dot{x}_1(t) = x_2(t)                                  \\
+        \dot{x}_2(t) = \frac{1}{m}u(t) - \frac{\beta}{m}x_2(t) \\
+        y(t) = x_1(t)
+    \end{cases}
 \]
 Quindi lo stato di spazio è dato da $x(t) = \begin{bmatrix} x_1(t)=p(t) \\ x_2(t)=V(t) \end{bmatrix}$, l'ingresso è dato da $u(t) = F(t)$ e l'uscita è data da $y(t) = p(t)$.
 \section{Sistema di controllo}
 \subsection{Componenti di un sistema di controllo}
 Un sistema di controllo è composto da:
 \begin{itemize}
-    \item Un sistema da controllare, chiamato \textit{plant} (sistema oggetto del controllo)
+    \item Un sistema da controllare, chiamato \textit{plant} (sistema oggetto del
+          controllo)
     \item Un \textit{controller} (sistema che genera il segnale di controllo)
     \item Un \textit{sensore} (sistema che misura l'uscita del sistema da controllare)
     \item Un elemento di riferimento (sistema che fornisce il segnale desiderato)
@@ -110,3 +128,73 @@ Un sistema di controllo è composto da:
 \begin{center}
     \includegraphics[width=0.5\textwidth]{foto/cph1/2.png}
 \end{center}
+Delle volte scorporiamo dall'impianto di controllo un elemento chiamato \textit{attuatore} (sistema che trasforma il segnale di controllo in un'azione fisica).
+\subsubsection{Problemi di tracciamento e regolazione}
+Quando progettiamo un sistema di controllo, dobbiamo tenere in considerazione
+due problemi principali:
+\begin{itemize}
+    \item Problema di tracciamento: vogliamo che l'uscita del sistema da controllare
+          segua un certo riferimento, ovvero vogliamo che $y(t) \rightarrow r(t)$ per $t
+              \rightarrow \infty$.
+    \item Problema di regolazione: vogliamo che l'uscita del sistema da controllare si
+          stabilizzi su un certo valore, ovvero vogliamo che $y(t) \rightarrow y_{des}$
+          per $t \rightarrow \infty$.
+\end{itemize}
+Dobbiamo quindi tenere in considerazione che un sistema di alcuni segnali di disturbo, ovvero segnali che influenzano il comportamento del sistema da controllare ma che non sono sotto il nostro controllo, e che possono essere causati da fattori esterni o da incertezze nel modello del sistema da controllare.
+La struttura del controllore quindi si espande in:
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{foto/cph1/3.png}
+\end{center}
+dove:
+\begin{itemize}
+    \item$u(t)$ è il segnale di input del sistema da controllare, che è generato dal controller.
+    \item $d(t)$ è il segnale di disturbo che influenza il comportamento del sistema da controllare.
+    \item $z(t)$ è il segnale di uscita del sistema da controllare, che è misurato dal sensore.
+    \item $d_s(t)$ è il segnale di disturbo che influenza la misura dell'uscita del sistema da controllare da parte del sensore.
+    \item $y(t)$ è il segnale di uscita del sensore, che è influenzato sia dall'uscita del sistema da controllare che dal disturbo del sensore.
+    \item $r(t)$ è il segnale di riferimento che fornisce il valore desiderato per l'uscita del sistema da controllare.
+\end{itemize}
+Per un dato segnale di riferimento $r(t)$, il controller deve generare un segnale di controllo $u(t)$ che permetta al sistema da controllare di seguire il riferimento desiderato, nonostante la presenza dei disturbi $d(t)$ e $d_s(t)$, quindi dove $y(t) \rightarrow r(t)$ per $t \rightarrow \infty$.
+Un importante classe di problemi di controllo dove il segnale di riferimento è costante sono chiamati \textit{problemi di controllo}.
+Un layout tipico di un sistema di controllo è il seguente:
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{foto/cph1/4.png}
+\end{center}
+\begin{tcolorbox}[colback=yellow!10, colframe=black]
+    Possiamo immaginare l'impianto da controllare come un corpo umano, il controller come il cervello (sistema immunitario nel caso di malattie), il sensore come i recettori sensoriali e l'elemento di riferimento come i desideri o le necessità del corpo umano.
+    Se ipotizziamo il caso di un diabetico, il sistema da controllare è il corpo umano, il controller è il pancreas, il sensore sono i recettori che misurano la glicemia e l'elemento di riferimento è il livello di glicemia desiderato.
+\end{tcolorbox}
+Un sistema di controllo dove posso unire più subsistemi di controllo è detto modello \textit{compartimentale}.
+\subsection{Tipi di sistemi di controllo}
+Intuitivamente, la struttura di controllo vista fin ora è detta
+\textit{feedback}, in quanto il controller utilizza l'uscita del sistema da
+controllare per generare il segnale di controllo, quindi c'è un feedback tra il
+sistema da controllare e il controller. Tuttavia, esistono anche sistemi di
+controllo che non utilizzano il feedback, detti \textit{feedforward}, in cui il
+controller genera il segnale di controllo solo in base al segnale di
+riferimento e non utilizza l'uscita del sistema da controllare.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{foto/cph1/5.png}
+\end{center}
+\begin{tcolorbox}[colback=yellow!10, colframe=black]
+    Il controllore feedforward è anch'esso descritto matematicamente da un'equazione di ingresso-stato-uscita, quindi un \textit{sistema dinamico}, ma in questo caso l'ingresso del controllore è dato solo dal segnale di riferimento $r(t)$ e non dall'uscita del sistema da controllare $y(t)$.
+    \begin{enumerate}
+        \item Caso generale: matematicamente esprimo tutto come $y(t)=f(g(r(t)))$, dove
+              $g(r(t))$ è l'uscita del controllore feedforward, $f(g(r(t)))$ è l'uscita del
+              sistema da controllare e $g(r(t))=f^{-1}(r(t))$ è la funzione inversa del
+              sistema da controllare, quindi se riesco a trovare la funzione inversa del
+              sistema da controllare, posso utilizzare il controllore feedforward per
+              generare un segnale di controllo che permetta al sistema da controllare di
+              seguire il riferimento desiderato.
+        \item Caso con disturbi: se ci sono disturbi, il controllore feedforward non è in
+              grado di compensare i disturbi, quindi ottengo che $y(t)=f(g(r(t))) + d(t)$,
+              quindi il sistema da controllare non riesce a seguire il riferimento desiderato
+              a causa dei disturbi.
+        \item Caso modello impreciso: se il modello del sistema da controllare è impreciso,
+              il controllore feedforward non è in grado di generare un segnale di controllo
+              che permetta al sistema da controllare di seguire il riferimento desiderato,
+              quindi ottengo che $y(t)=f(g(r(t))) + \epsilon(t)$, dove $\epsilon(t)$
+              rappresenta l'errore dovuto al modello impreciso.
+    \end{enumerate}
+\end{tcolorbox}
+Ogni sistema di controllo deve essere in grado di garantire tracking del segnale di riferimento in presenza di \textit{disturbi}, \textit{rumori di misura} e \textit{modelli imprecisi}, risultando quindi un sistema con \textit{traceback}, \textit{feedback system} o \textit{closed-loop system}.
