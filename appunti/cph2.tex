@@ -76,3 +76,50 @@ Noi ci occuperemo di sistemi finiti-dimensionali, ovvero sistemi che hanno un nu
         y (t) = V_C (t) + V_R (t) = x_1 (t) + R x_2 (t)
     \]
 \end{tcolorbox}
+\begin{tcolorbox}[colback=yellow!10, colframe=black]
+    Consideriamo lo schema semplice a singol link 2DOF (degree of freedom):
+    Ipotizziamo un pendolo semplice: \newline \newline
+    \begin{minipage}{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.5\textwidth]{foto/cph2/2.png}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \begin{center}
+            Definiamo le diverse variabili come:
+            \begin{itemize}
+                \item $\theta$ è l'angolo che il pendolo forma con la verticale
+                \item $m$ è la massa del pendolo
+                \item $l$ è la lunghezza del pendolo
+                \item $g$ è l'accelerazione di gravità
+                \item $u$ è la forza che agisce sul pendolo
+                \item $\beta$ è il coefficiente di attrito viscoso
+            \end{itemize}
+        \end{center}
+    \end{minipage}
+    \newline
+    \newline
+    Scriviamo ora le equazioni del moto del pendolo:
+    \[
+        m l^2 \ddot{\theta} + \beta \dot{\theta} + m g l \sin \theta = u
+    \]
+    Definiamo ora le variabili di stato:
+    \[
+        \begin{cases}
+            x_1 (t) = \theta (t) \\
+            x_2 (t) = \dot{\theta} (t)
+        \end{cases}
+    \]
+    Sostituiamo ora le variabili di stato nella nostra equazione del moto:
+    \[
+        \begin{cases}
+            \dot{x}_1 (t) = x_2 (t) \\
+            \dot{x}_2 (t) = -\frac{\beta}{m l^2} x_2 (t) - \frac{g}{l} \sin x_1 (t) + \frac{1}{m l^2} u (t)
+        \end{cases}
+    \]
+    \newline
+    L'uscita del sistema è data da:
+    \[
+        y (t) = x_1 (t)
+    \]
+\end{tcolorbox}
