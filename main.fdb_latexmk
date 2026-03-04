@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1772441330.19589 "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" "main.pdf" "main" 1772441332.08215 0
-  "C:/Users/peppe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772011519 96561 e9f89df9086b148632dcb1b0a098c7ab ""
+["pdflatex"] 1772618848.06627 "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" "main.pdf" "main" 1772618849.94869 0
+  "C:/Users/peppe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772470821 137073 189cd96272866ed3a0390e6eee23b364 ""
   "C:/Users/peppe/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1748422589 11548 815bb6be23bddcbdf59e67ae6ae5d5ab ""
   "C:/Users/peppe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1748385575 13159325 41d25d88f971bc0b2b9e2f66ce065b2a ""
   "C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
@@ -147,8 +147,8 @@
   "C:/Users/peppe/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "appunti/cph1.tex" 1772438332 12954 5d0a0de6536c1f2e5d85b7fefe8b3b34 ""
   "appunti/cph2.tex" 1772438635 4718 c651513cc9851125b44179e41f00c28f ""
-  "appunti/cph3.tex" 1772441329 1408 ff7f1fc26ae8bf163d829717d2caa4a9 ""
-  "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" 1772439481 723 403098a5c4e3644d482d1eb1d1b32d90 ""
+  "appunti/cph3.tex" 1772618845 8555 1d3dc9e8ba0a1b3a22c6de90351e9d0a ""
+  "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" 1772554437 723 403098a5c4e3644d482d1eb1d1b32d90 ""
   "foto/cph1/1.png" 1771834570 7872 fd92832718088720ae453b2cc94bebd4 ""
   "foto/cph1/2.png" 1771841896 16176 0eb34bc56359505a44feffdb637136c8 ""
   "foto/cph1/3.png" 1772005868 32279 c77d8a128f302ef486933cea81fad530 ""
@@ -157,8 +157,8 @@
   "foto/cph2/1.png" 1772012530 7772 ab8614a1b11081064c3575acbf39f294 ""
   "foto/cph2/2.png" 1772438237 21078 cbb97424b15439a99a43fe6344cc36a7 ""
   "foto/cph3/1.png" 1772440504 25831 55d8fb0f354e5d0641aaec02c7acdd21 ""
-  "main.aux" 1772441331 1591 b126a5d551cf2a09322165e2af8dd1cc "pdflatex"
-  "main.tex" 1772439481 723 403098a5c4e3644d482d1eb1d1b32d90 ""
+  "main.aux" 1772618849 2106 2d1324199ab22c129a25aef173c834ef "pdflatex"
+  "main.tex" 1772554437 723 403098a5c4e3644d482d1eb1d1b32d90 ""
   (generated)
   "main.aux"
   "main.log"

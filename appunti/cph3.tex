@@ -7,14 +7,139 @@ Consideriamo un sistema LTI continuo rappresentato in forma stato-spazio:
         y(t) = C x(t) + D u(t)
     \end{cases}
 \end{equation}
-Dove $A$, $B$, $C$ e $D$ sono matrici di dimensioni opportune. La matrice $A$ è detta matrice di stato, $B$ è la matrice di ingresso, $C$ è la matrice di uscita e $D$ è la matrice di feedthrough (o matrice di trasmissione diretta).
-Per risolvere questo sistema, possiamo utilizzare la matrice esponenziale. La soluzione generale
-La soluzione di un sistema LTI continuo è data dall'equazione di Lagrange:
+Dove $A$, $B$, $C$ e $D$ sono matrici di dimensioni opportune. La matrice $A$ è
+detta matrice di stato, $B$ è la matrice di ingresso, $C$ è la matrice di uscita
+e $D$ è la matrice di feedthrough (o matrice di trasmissione diretta). Per
+risolvere questo sistema, possiamo utilizzare la matrice esponenziale. La
+soluzione generale La soluzione di un sistema LTI continuo è data dall'equazione
+di Lagrange:
 \begin{equation}
     x(t) = e^{At} x(0) + \int_0^t e^{A(t-\tau)} B u(\tau) d\tau = x_{zi}(t) + x_{zs}(t)
 \end{equation}
-Dove $x_{zi}(t) = e^{At} x(0)$ è la soluzione del sistema omogeneo (ovvero la soluzione senza ingresso)[risposta libera dello stato] e $x_{zs}(t) = \int_0^t e^{A(t-\tau)} B u(\tau) d\tau$ è la soluzione particolare (ovvero la soluzione dovuta all'ingresso)[risposta forzata dello stato].
-La computazione di $x(t)$ e $y(t)$ attraverso la trasformata di Laplace è un metodo ottenuto attraverso il seguente schema:
+Dove $x_{zi}(t) = e^{At} x(0)$ è la soluzione del sistema omogeneo (ovvero la
+soluzione senza ingresso)[risposta libera dello stato] e $x_{zs}(t) = \int_0^t
+    e^{A(t-\tau)} B u(\tau) d\tau$ è la soluzione particolare (ovvero la soluzione
+dovuta all'ingresso)[risposta forzata dello stato]. La computazione di $x(t)$ e
+$y(t)$ attraverso la trasformata di Laplace è un metodo ottenuto attraverso il
+seguente schema:
 \begin{center}
     \includegraphics[width=0.8\textwidth]{foto/cph3/1.png}
 \end{center}
+Per semplificare la computazione, possiamo utilizzare la matrice di
+trasferimento del sistema, che è data da:
+\begin{equation}
+    \begin{cases}
+        sX(s) - x(0) = A X(s) + B U(s) \\
+        Y(s) = C X(s) + D U(s)
+    \end{cases}
+\end{equation}
+La trasormata di Laplace dello stato di risposta è data da:
+\begin{align*}
+    X(s)      & = (sI - A)^{-1} x(0) + (sI - A)^{-1} B U(s)= X_{zi}(s) + X_{zs}(s) \\
+    X_{zi}(s) & = (sI - A)^{-1} x(0) = H_{zi}(s) x(0)                              \\
+    X_{zs}(s) & = (sI - A)^{-1} B U(s) = H_{zs}(s) U(s)
+\end{align*}
+Dove $H_{zi}(s) = (sI - A)^{-1}$ è la matrice di trasferimento del sistema
+omogeneo e $H_{zs}(s) = (sI - A)^{-1} B$ è la matrice di trasferimento del
+sistema forzato. La trasformata di Laplace dell'uscita è data da:
+\begin{align*}
+    Y(s)      & = C X(s) + D U(s) = C (sI - A)^{-1} x(0) + (C (sI - A)^{-1} B + D) U(s) = Y_{zi}(s) + Y_{zs}(s) \\
+    Y_{zi}(s) & = C (sI - A)^{-1} x(0) = H_{zi}(s) x(0)                                                         \\
+    Y_{zs}(s) & = (C (sI - A)^{-1} B + D) U(s) = H_{zs}(s) U(s)
+\end{align*}
+\subsection{Esempio computazionale}
+Vogliamo calcolare la risposta dell'uscita quando l'ingresso è un gradino
+unitario, ovvero $u(t) = 1$ per $t \geq 0$ e $u(t) = 0$ per $t < 0$.
+Consideriamo il seguente sistema LTI continuo:
+\begin{equation}
+    \begin{cases}
+        \dot{x}(t) = \begin{bmatrix} -3 & 2 \\ -2 & -3 \end{bmatrix} x(t) + \begin{bmatrix} 1 \\ 0 \end{bmatrix} u(t) \\
+        y(t) = \begin{bmatrix} 0 & 1 \end{bmatrix} x(t)
+    \end{cases}
+\end{equation}
+dove $A = \begin{bmatrix} -3 & 2 \\ -2 & -3 \end{bmatrix}$, $B = \begin{bmatrix}
+        1 \\ 0 \end{bmatrix}$, $C = \begin{bmatrix} 0 & 1 \end{bmatrix}$ e $D = 0$.
+\begin{tcolorbox}
+    Piccolo reminder: per calolare la matrice $(sI - A)^{-1}$ è necessario
+    calcolare il determinante di $(sI - A)$ e la matrice aggiunta di $(sI - A)$.
+    Per una matrice 2x2, il calcola avviene scambiando i termini diagonali,
+    cambiando il segno dei termini fuori diagonale e dividendo per il
+    determinante.
+\end{tcolorbox}
+La matrice $(sI - A)^{-1}$ è data da:
+\begin{equation}
+    (sI - A)^{-1} = \begin{bmatrix} \frac{s + 3}{(s + 3)^2 + 4} & \frac{2}{(s + 3)^2 + 4} \\ \frac{-2}{(s + 3)^2 + 4} & \frac{s + 3}{(s + 3)^2 + 4} \end{bmatrix}
+\end{equation}
+Calcoliamo ora $Y(s)$:
+\begin{align*}
+    Y(s)      & = C (sI - A)^{-1} x(0) + (C (sI - A)^{-1} B + D) U(s)                                                                                                                                                                                                                              \\
+    Y_{zi}(s) & = C (sI - A)^{-1} x(0) = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} \frac{s + 3}{(s + 3)^2 + 4} & \frac{2}{(s + 3)^2 + 4} \\ \frac{-2}{(s + 3)^2 + 4} & \frac{s + 3}{(s + 3)^2 + 4} \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \frac{s + 1}{(s + 3)^2 + 4}      \\
+    Y_{zs}(s) & = (C (sI - A)^{-1} B + D) U(s) = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} \frac{s + 3}{(s + 3)^2 + 4} & \frac{2}{(s + 3)^2 + 4} \\ \frac{-2}{(s + 3)^2 + 4} & \frac{s + 3}{(s + 3)^2 + 4} \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \frac{-2}{(s + 3)^2 + 4}
+\end{align*}
+aggiungere qualcosina
+\subsection{Come si calcolano le radici multiple?}
+Per calcolare le radici multiple di un polinomio, è necessario seguire questi
+passaggi: 1. Calcolare il polinomio caratteristico del sistema, che è dato da
+$\det(sI - A)$. 2. Trovare le radici del polinomio caratteristico, che sono i
+valori di $s$ per cui $\det(sI - A) = 0$. 3. Se una radice si ripete $k$ volte,
+allora si dice che è una radice multipla di ordine $k$. 4. Per ogni radice
+multipla, è necessario calcolare i corrispondenti autovettori generalizzati,
+che sono ottenuti risolvendo il sistema $(sI - A) v = 0$ per la radice multipla
+$s$. 5. La soluzione generale del sistema sarà data da una combinazione lineare
+degli autovettori e degli autovettori generalizzati associati alle radici
+multiple. Ad esempio, se $Y(s)$ è pari a:
+\begin{equation}
+    Y(s) = \frac{N(s)}{D(s)}
+\end{equation}
+Abbiamo quindi che $D(s)$ è il polinomio caratteristico del sistema. Se $D(s)$
+ha una radice multipla di ordine $k$ in $s = s_0$, allora la soluzione generale
+del sistema avrà la forma:
+\begin{equation}
+    y(t) = e^{s_0 t} (C_0 + C_1 t + C_2 t^2 + ... + C_{k-1} t^{k-1})
+\end{equation}
+Dove $C_0$, $C_1$, ..., $C_{k-1}$ sono costanti determinate dalle condizioni
+iniziali del sistema.
+
+da completare
+
+\subsection{LTI continui nel tempo}
+Una funzione di trasferimento di un sistema LTI continuo nel tempo è una
+fuzione razionale di $s$ che rappresenta la relazione tra l'ingresso e l'uscita
+del sistema. La funzione di trasferimento è data da:
+\begin{equation}
+    H(s) = C (sI - A)^{-1} B + D
+\end{equation}
+Dove $A$, $B$, $C$ e $D$ sono le matrici di stato, ingresso, uscita e
+feedthrough del sistema. La funzione di trasferimento può essere utilizzata per
+analizzare la stabilità, la risposta in frequenza e altre proprietà del sistema.
+Può anche essere espressa come una frazione di polinomi:
+\begin{equation}
+    H(s) = \frac{N(s)}{D(s)} = \frac{b_m s^m + b_{m-1} s^{m-1} + ... + b_0}{s^n + a_{n-1} s^{n-1} + ... + a_0}
+\end{equation}
+dove se:
+\begin{itemize}
+    \item $m < n$, allora il sistema è detto \textbf{strictly proper} (strettamente
+          proprio).
+    \item $m = n$, allora il sistema è detto \textbf{proper} (proprio).
+    \item $m > n$, allora il sistema è detto \textbf{improper} (improprio).
+\end{itemize}
+Le radici del polinomio $D(s)$ sono dette poli del sistema, mentre le radici del polinomio $N(s)$ sono dette zeri del sistema.
+Si può definire anche come funzione zero-pole-gain, che è data da:
+\begin{equation}
+    H(s) = K \frac{(s-z_1)(s-z_2)...(s-z_m)}{(s-p_1)(s-p_2)...(s-p_n)}
+\end{equation}
+Dove $K$ è il guadagno del sistema, $z_i$ sono gli zeri del sistema e $p_i$ sono i poli del sistema.
+$K$ si chiama guadagno statico del sistema, calcolato come $K = \lim_{s \to \infty} s^{n-m}H(s)$,
+Esiste un'ulteriore forma per esprimere la funzione di trasferimento, chiamata forma fattorizzata in costanti di tempo (dc-gain form), che è data da:
+\begin{equation}
+    H(s) = K \frac{(1-s/z_1)(1-s/z_2)...(1-s/z_m)}{(1-s/p_1)(1-s/p_2)...(1-s/p_{n-r})}
+\end{equation}
+Dove $K$ è il guadagno del sistema, $z_i$ sono gli zeri del sistema e $p_i$ sono i poli del sistema.
+$K$ si chiama guadagno statico del sistema, calcolato come $K = \lim_{s \to 0} s^r H(s)$.
+\subsection{Dalla funzione di trasferimento alla rappresentazione di stato}
+Risulta spontaneo chideresi se è possibile passare dalla funzione di
+trasferimento alla rappresentazione di stato. Il problema della
+\textit{realizzazione} non viene affrontato nel corso perché presenta una
+falla: esistono infinite rappresentazioni di stato che corrispondono alla
+stessa funzione di trasferimento. (del file parte 3.2 tutto quello che va da
+pagina 36 alla fine non va fatto)
