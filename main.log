@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.28)  4 MAR 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.28)  16 MAR 2026 11:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -679,26 +679,85 @@ Package pdftex.def Info: foto/cph3/1.png  used on input line 26.
 
 [6 <./foto/cph3/1.png>]
 
-[7])
+[7]) (appunti/cph4.tex
 
-[8] (main.aux)
+[8]
+<foto/cph4/equilibrio.png, id=62, 940.26282pt x 515.67656pt>
+File: foto/cph4/equilibrio.png Graphic file (type png)
+<use foto/cph4/equilibrio.png>
+Package pdftex.def Info: foto/cph4/equilibrio.png  used on input line 105.
+(pdftex.def)             Requested size: 256.07481pt x 140.43842pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<foto/cph4/lyapunov.png, id=63, 220.825pt x 303.1325pt>
+File: foto/cph4/lyapunov.png Graphic file (type png)
+<use foto/cph4/lyapunov.png>
+Package pdftex.def Info: foto/cph4/lyapunov.png  used on input line 120.
+(pdftex.def)             Requested size: 134.44162pt x 184.55902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--126
+
+ []
+
+
+
+[9]
+Overfull \hbox (24.4019pt too wide) in paragraph at lines 140--148
+ [] 
+ []
+
+<foto/cph4/stability.png, id=67, 810.77907pt x 253.69781pt>
+File: foto/cph4/stability.png Graphic file (type png)
+<use foto/cph4/stability.png>
+Package pdftex.def Info: foto/cph4/stability.png  used on input line 152.
+(pdftex.def)             Requested size: 230.46576pt x 72.11493pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--155
+
+ []
+
+
+
+[10 <./foto/cph4/equilibrio.png> <./foto/cph4/lyapunov.png (PNG copy)> <./foto/cph4/stability.png>]
+<foto/cph4/grafico.png, id=73, 870.25125pt x 421.575pt>
+File: foto/cph4/grafico.png Graphic file (type png)
+<use foto/cph4/grafico.png>
+Package pdftex.def Info: foto/cph4/grafico.png  used on input line 206.
+(pdftex.def)             Requested size: 256.07481pt x 124.04834pt.
+<foto/cph4/raggiungibilità.png, id=74, 360.59718pt x 211.54031pt>
+File: foto/cph4/raggiungibilità.png Graphic file (type png)
+<use foto/cph4/raggiungibilità.png>
+Package pdftex.def Info: foto/cph4/raggiungibilità.png  used on input line 228.
+(pdftex.def)             Requested size: 256.07481pt x 150.22371pt.
+
+
+[11 <./foto/cph4/grafico.png>])
+
+[12 <./foto/cph4/raggiungibilità.png>] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18393 strings out of 469923
- 370418 string characters out of 5469170
- 746161 words of memory out of 5000000
- 44925 multiletter control sequences out of 15000+600000
- 635071 words of font info for 72 fonts, out of 8000000 for 9000
+ 18447 strings out of 469923
+ 371917 string characters out of 5469170
+ 746163 words of memory out of 5000000
+ 44975 multiletter control sequences out of 15000+600000
+ 635430 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,14n,121p,497b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\peppe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (8 pages, 292161 bytes).
+ 116i,14n,121p,531b,709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\peppe\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/peppe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (12 pages, 531521 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
