@@ -1,10 +1,12 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
 \usepackage{geometry}
 \usepackage{longtable}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{tcolorbox}
@@ -25,11 +27,20 @@
 \author{Giuseppe Magnifico}
 \date{2026}
 
+% Include sicuro: evita errore se il file non esiste
+\newcommand{\safeinput}[1]{%
+  \IfFileExists{#1}{\input{#1}}{%
+    \typeout{[ATTENZIONE] File mancante: #1}%
+  }%
+}
+
 \begin{document}
 
 \maketitle
-\input{appunti/cph1.tex}
-\input{appunti/cph2.tex}
-\input{appunti/cph3.tex}
-\input{appunti/cph4.tex}
+\safeinput{appunti/cph1.tex}
+\safeinput{appunti/cph2.tex}
+\safeinput{appunti/cph3.tex}
+\safeinput{appunti/cph4.tex}
+\safeinput{appunti/cph5.tex}
+
 \end{document}
