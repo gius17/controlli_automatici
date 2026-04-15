@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1776070342.83194 "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" "main.pdf" "main" 1776070346.0019 0
+["pdflatex"] 1776240783.91906 "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" "main.pdf" "main" 1776240788.63767 0
   "C:/Users/peppe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773323139 137073 189cd96272866ed3a0390e6eee23b364 ""
   "C:/Users/peppe/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbi1000.pk" 1773846710 34112 670213d8047966721271954d3821f952 ""
   "C:/Users/peppe/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1773846714 25420 20ed3ca7816d60a941378f324b74e5f5 ""
@@ -168,7 +168,7 @@
   "appunti/cph2.tex" 1772438635 4718 c651513cc9851125b44179e41f00c28f ""
   "appunti/cph3.tex" 1773935591 8553 7945eebd607048d7c9be964913229401 ""
   "appunti/cph4.tex" 1774434113 25792 13b569d1876a5056efd7b46c3180b68b ""
-  "appunti/cph5.tex" 1776070341 5630 6306e2fc46cbf483f78963dc97585fde ""
+  "appunti/cph5.tex" 1776240782 9869 704d7be8377066d2f8936972b1ed28f3 ""
   "c:/Users/peppe/Documents/VScode/controlli_automatici-1/main.tex" 1776064385 1028 4871d0ac704840e47fa9355282e3f35b ""
   "foto/cph1/1.png" 1771834570 7872 fd92832718088720ae453b2cc94bebd4 ""
   "foto/cph1/2.png" 1771841896 16176 0eb34bc56359505a44feffdb637136c8 ""
@@ -186,7 +186,19 @@
   "foto/cph4/raggiungibilità.png" 1773655606 19457 b1f3f3c087328f45e9b5e52b4b08e633 ""
   "foto/cph4/stability.png" 1773649584 52778 1775db73fd042a5c744135e36ca81385 ""
   "foto/cph5/1.png" 1776070316 14776 68757dd7a3760a3409534c0a86336e86 ""
-  "main.aux" 1776070345 4564 1a2dbe1b99d69879017edb3265eef021 "pdflatex"
+  "foto/cph5/10.png" 1776236892 102727 463e627e89e66e9cc248ae7dfd762f86 ""
+  "foto/cph5/11.png" 1776236921 57928 a23ae99327e5eaffcd5d7a10e8b00a46 ""
+  "foto/cph5/12.png" 1776236947 57749 1375918a777d3dbd76e2d6cebc5360a3 ""
+  "foto/cph5/13.png" 1776236972 60035 08d77fa3439cd10cbd28645d2d15a760 ""
+  "foto/cph5/2.png" 1776070942 36884 e42760d6d414e230c30946e18738cea7 ""
+  "foto/cph5/3.png" 1776236260 99689 95c54a4084aab2581aa0ef2a54a15381 ""
+  "foto/cph5/4.png" 1776236276 59037 f89240169f9313723d237b8ca2d7a52d ""
+  "foto/cph5/5.png" 1776236300 55460 a631edca89e004a404c7f6fd36f1ded9 ""
+  "foto/cph5/6.png" 1776236325 63455 205fdc2d411d16ad933b24526e31821e ""
+  "foto/cph5/7.png" 1776236340 67809 dc7775e897ec204725a70136daf9667e ""
+  "foto/cph5/8.png" 1776236356 62224 cc67334fe8d86bc3931ed0a04629f826 ""
+  "foto/cph5/9.png" 1776236371 61210 35e607f751feed60aa0cb573680375b0 ""
+  "main.aux" 1776240788 5143 a554ef1f11688f7cc897a222d057f40d "pdflatex"
   "main.tex" 1776064385 1028 4871d0ac704840e47fa9355282e3f35b ""
   (generated)
   "main.aux"

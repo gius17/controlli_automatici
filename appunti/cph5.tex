@@ -106,17 +106,24 @@ $H(j\omega)$ si può rappresentare in diverse forme:
 \begin{itemize}
     \item forma cartesiana: $H(j\omega) = Re(H(j\omega)) + jIm(H(j\omega))$
     \item forma polare: $H(j\omega) = |H(j\omega)|e^{j\arg(H(j\omega))}$
-    \item diagramma di Bode: rappresentazione della magnitudine e della fase in funzione della frequenza $\omega$ su scala logaritmica.
+    \item diagramma di Bode: rappresentazione della magnitudine e della fase in funzione
+          della frequenza $\omega$ su scala logaritmica.
 \end{itemize}
 
 \subsection{Rappresentazioni}
 \subsubsection{Diagramma di Bode}
-I diagrammi di Bode sono rappresentazioni grafiche della risposta in frequenza di un sistema. Il diagramma di Bode è composto da due grafici: il primo rappresenta la magnitudine $|H(j\omega)|$ in decibel (dB) in funzione della frequenza $\omega$ su scala logaritmica, mentre il secondo rappresenta la fase $\arg(H(j\omega))$ in gradi in funzione della frequenza $\omega$ su scala logaritmica.
+I diagrammi di Bode sono rappresentazioni grafiche della risposta in frequenza
+di un sistema. Il diagramma di Bode è composto da due grafici: il primo
+rappresenta la magnitudine $|H(j\omega)|$ in decibel (dB) in funzione della
+frequenza $\omega$ su scala logaritmica, mentre il secondo rappresenta la fase
+$\arg(H(j\omega))$ in gradi in funzione della frequenza $\omega$ su scala
+logaritmica.
 \begin{center}
     \includegraphics[scale=0.5]{foto/cph5/2.png}
 \end{center}
 
-Per calcolare il diagramma devo usare la dc-form della funzione di trasferimento, che è data da:
+Per calcolare il diagramma devo usare la dc-form della funzione di
+trasferimento, che è data da:
 \begin{equation}
     H(s) = K \cdot \frac{(s-z_1)(s-z_2)...(s-z_m)}{(s-p_1)(s-p_2)...(s-p_n)}
 \end{equation}
@@ -128,6 +135,126 @@ Per calcolare il diagramma devo usare la dc-form della funzione di trasferimento
     \end{equation}
     Per calcolare il diagramma di Bode, calcolo prima la magnitudine $|H(j\omega)|$ e la fase $\arg(H(j\omega))$:
     \begin{equation}
-        |H(j\omega)| = 20 log_{10}(|H(j\omega)|) = 
+        |H(j\omega)| = 20 log_{10}(|H(j\omega)|) =
     \end{equation}
-    \end{tcolorbox} 
+\end{tcolorbox}
+
+\newpage
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/3.png}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/4.png}
+    \end{center}
+\end{minipage}
+\newline
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/5.png}
+    \end{center}
+
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/6.png}
+    \end{center}
+\end{minipage}
+\newline
+\begin{minipage}
+    {0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/7.png}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/8.png}
+    \end{center}
+\end{minipage}
+\newline
+\begin{minipage}
+    {0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.5]{foto/cph5/9.png}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.4]{foto/cph5/10.png}
+    \end{center}
+\end{minipage}
+\newline
+\begin{minipage}
+    {0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.4]{foto/cph5/11.png}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.4]{foto/cph5/12.png}
+    \end{center}
+\end{minipage}
+\newline
+\begin{minipage}
+    {0.45\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.4]{foto/cph5/13.png}
+    \end{center}
+\end{minipage}
+
+In MATLAB, possiamo utilizzare la funzione \verb|bode| per calcolare il
+diagramma di Bode di una funzione di trasferimento. Ad esempio, se abbiamo la
+funzione di trasferimento $H(s) = \frac{1}{(s^2 +3*s+2)}$, possiamo calcolare
+il diagramma di Bode con il seguente codice:
+\begin{verbatim}
+    s = tf('s');
+    H = 1/(s^2 +3*s+2);
+    figure, bode(H);
+\end{verbatim}
+Questo codice creerà un grafico con la magnitudine e la fase di $H(j\omega)$ in
+funzione della frequenza $\omega$ su scala logaritmica. Se faccio
+\verb|omega = logspace(a,b,n)|, ottengo un vettore di $n$ punti equispaziati in
+scala logaritmica tra $10^a$ e $10^b$. Se voglio calcolare il diagramma di Bode
+in un intervallo di frequenze $\omega$ specifico, posso usare
+\verb|bode(H,omega)|. Il comando Bode non sempre restituisce un grafico
+conveniente per l'uso che ci serve.
+
+\subsubsection{Diagramma polare}
+Un diagramma polare è una rappresentazione grafica della risposta in frequenza
+ottenuta rappresentando la parte immaginaria $Im[H(j\omega)]$ in funzione della
+parte reale $Re[H(j\omega)]$ in un singolo piano parametrizzato ed orientato in
+$\omega$. Ogni grafico corrisponde ad un valore di frequenza $\omega$. Un
+approssimazione del diagramma polare può essere ottenuta a partire dal
+diagramma di Bode, utilizzando le seguenti relazioni:
+\begin{equation}
+    Re[H(j\omega)] = |H(j\omega)| \cdot \cos(\arg(H(j\omega)))
+\end{equation}
+\begin{equation}
+    Im[H(j\omega)] = |H(j\omega)| \cdot \sin(\arg(H(j\omega)))
+\end{equation}
+Per usare il diagramma polare su MATLAB, possiamo utilizzare la funzione \verb|nyquist|. Ad esempio, se abbiamo la funzione di trasferimento $H(s) = \frac{1}{(s^2 +3*s+2)}$, possiamo calcolare il diagramma polare con il seguente codice:
+\begin{verbatim}
+    s = tf('s');
+    H = 1/(s^2 +3*s+2);
+    [re, im] = nyquist(H);
+    figure, plot(squeeze(re), squeeze(im));
+\end{verbatim}
+La funzione \verb|nyquist| restituisce due array, uno per la parte reale e uno
+per la parte immaginaria di $H(j\omega)$; la funzione \verb|squeeze| viene
+utilizzata per rimuovere le dimensioni singleton dagli array restituiti da
+\verb|nyquist|, in modo da poterli utilizzare direttamente nella funzione
+\verb|plot| per tracciare il diagramma polare.
+\subsubsection{Diagramma di Nyquist}
+
+\subsubsection{Diagramma di Nichols}
+Il diagramma di Nichols è una rappresentazione grafica della risposta in
+frequenza ottenuta rappresentando la magnitudine $|H(j\omega)|$ in decibel (dB)
+in funzione della fase $\arg(H(j\omega))$ in gradi. Ogni punto del diagramma
+corrisponde ad un valore di frequenza $\omega$. Impropriamente, possiamo dire
+che il diagramma di Nichols è la fusione dei diagrammi di Bode, in cui la
+magnitudine e la fase sono rappresentate nello stesso grafico.
